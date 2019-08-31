@@ -23,5 +23,3 @@ headphones = ['Skullcandy Ink\'d', 'Audio Technica ATH M50x', 'Noble Savant', 'A
 headphonesTuple = tuple(headphones)
 print(headphones)
 print(headphonesTuple)
-
-

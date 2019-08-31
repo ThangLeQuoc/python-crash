@@ -72,7 +72,6 @@ things = ["mozzarella","cinderella", "salmonella"]
 #####
 
 # 3.6. Make the cheesy element of things all uppercase and then print the list.
-
 section = '3.6'
 
 chessyElements = {'mozzarella'}
@@ -83,6 +82,22 @@ for i in range(len(things) - 1):
         things[i] = things[i].capitalize()
 print(things)
 print_footer(section)
+#####
+
+# 3.7. Delete the disease element from things, collect your Nobel Prize, and print the
+#list
+section = '3.7'
+print_header(section)
+disease_element = {'salmonella'}
+
+for element in things:
+    if (element in disease_element):
+        things.remove(element)
+print('Collecting my Nobel Prize')
+print(things)
+    
+print_footer(section)
+#####
 
 
 

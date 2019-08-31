@@ -120,6 +120,12 @@ surprise[-1] = last_element.capitalize()
 print('Now, surprise !')
 print(surprise)
 print_footer(section)
+
+## Better solution 
+# >>> surprise[-1] = surprise[-1].lower()
+# >>> surprise[-1] = surprise[-1][::-1]
+# >>> surprise[-1].capitalize()
+# 'Oprah'
 #####
 
 
@@ -208,9 +214,7 @@ print_footer(section)
 section = '3.16'
 print_header(section)
 print('Top Level key')
-for key in life.keys():
-    print(key)
-    break
+print(life.keys())
 print_footer(section)
 #####
 

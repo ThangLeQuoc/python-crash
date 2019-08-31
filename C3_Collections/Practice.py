@@ -99,6 +99,31 @@ print(things)
 print_footer(section)
 #####
 
+# 3.8. Create a list called surprise with the elements "Groucho", "Chico", and "Harpo"
+section = '3.8'
+print_header(section)
+surprise = ["Groucho", "Chico", "Harpo"]
+print(surprise)
+print_footer(section)
+#####
+
+# 3.9. Lowercase the last element of the surprise list, reverse it, and then capitalize it.
+section = '3.9'
+print_header(section)
+
+last_element = surprise[-1].lower()
+last_element_chars_list = list(last_element) # ['h', 'a', 'r', 'p', 'o']
+last_element_chars_list.reverse() # .reverse() will print None, the order of the list is changed internally
+last_element = ''.join(last_element_chars_list)
+surprise[-1] = last_element.capitalize()
+print('Now, surprise !')
+print(surprise)
+
+print_footer(section)
+#####
+
+
+
 
 
 

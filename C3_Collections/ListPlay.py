@@ -88,3 +88,80 @@ print(b) # 0,1,2,3
 b = a.copy()
 c = list(a)
 d = a[:]
+
+# Applying multiple condition
+## 10 < x < 20
+x = 15
+if 10 < x < 20:
+    print("Multiple condition works")
+if 10 < x < 20 < 50:
+    print("Multiple condition works")
+
+some_list = []
+if some_list:
+    print("It has content inside")
+else:
+    print("It's empty")
+
+vowels = 'aeiou'
+letter = 'o'
+if letter in vowels:
+    print(letter, "is a vowel")
+
+# Repeating with while
+count = 1
+while count < 5:
+    print(count)
+    count+=1
+
+# continue and break, similar to Java
+word = 'cat'
+for letter in word:
+    print(letter)
+
+# check loop break with else
+cheeses = []
+for cheese in cheeses:
+    print('This shop has some lovely', cheese)
+    break
+else: # no break mean no cheese
+    print('This is not much of a cheese shop, is it ?')
+
+# this is useful to check when the loop has run successfully
+# Iterate multiple sequences with zip()
+# Trick to iterate through multiple sequence, stop when the shortest one end
+days = ['Monday', 'Tuesday', 'Wednesday']
+fruits = ['Banana', 'Orange', 'Peach']
+drinks = ['Coffee', 'Tea', 'Beer']
+desserts = ['Tiramisu', 'Ice Cream', 'Pie', 'Pudding']
+for day, fruit, drink, dessert in zip(days, fruits, drinks, desserts):
+    print(day, ": drink", drink, "- eat", fruit, "- enjoy", dessert)
+
+english = 'Monday', 'Tuesday', 'Wednesday'
+french = 'Lundi', 'Mardi', 'Mercidi'
+eng_french = list(zip(english, french))
+e2f_dict = dict(eng_french)
+print(eng_french)
+print(e2f_dict)
+
+# Generate number sequences with range()
+# range (start, stop, step)
+for x in range (0,3):
+    print(x)
+list(range(0,3))
+
+# list comprehension
+# [expression for item in iterable if condition]
+number_list = [number for number in range(1,6)]
+print(number_list)
+
+a_list = [number for number in range(1,6) if number % 2 ==1]
+print(a_list)
+
+rows = range(1,4)
+cols = range(1,3)
+cells = [(row,col) for row in rows for col in cols]
+print(cells)
+
+
+

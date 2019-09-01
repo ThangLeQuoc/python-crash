@@ -90,5 +90,32 @@ limit = 10
 string_generator = ('Got ' + str(num) for num in range(limit))
 for item in string_generator:
     print(item)
-
 print_footer(section)
+
+
+# 4.8 Define a function called good that returns the list ['Harry', 'Ron', 'Her
+# mione']
+section = '4.8'
+print_header(section)
+def good():
+    return ['Harry', 'Ron', 'Hermione']
+print(good())
+print_footer(section)
+
+
+# 4.9 Define a generator function called get_odds that returns the odd numbers from
+# range(10). Use a for loop to find and print the third value returned.
+section = '4.9'
+print_header(section)
+limit = 10
+get_odds = (num for num in range(limit) if not num % 2 == 0)
+count = 0
+for num in get_odds:
+    if count == 2:
+        print(num)
+        break
+    count += 1
+print_footer(section)
+
+# 4.10 Define a decorator called test that prints 'start' when a function is called and
+# 'end' when it finishes.

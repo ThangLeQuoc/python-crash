@@ -43,3 +43,52 @@ while True:
         break
     start += 1
 print_footer(section)
+
+
+# 4.3 Use a for loop to print the values of the list [3, 2, 1, 0].
+section = '4.3'
+print_header(section)
+numbers = [3, 2, 1, 0]
+for num in numbers:
+    print(num)
+print_footer(section)
+
+
+# 4.4 Use a list comprehension to make a list of the even numbers in range(10).
+section = '4.4'
+print_header(section)
+even_numbers = [num for num in range(10) if num % 2 == 0]
+print(even_numbers)
+print_footer(section)
+
+
+# 4.5 Use a dictionary comprehension to create the dictionary squares. Use range(10)
+# to return the keys, and use the square of each key as its value.
+section = '4.5'
+print_header(section)
+limit = 10
+squares = { num:num * num for num in range(limit)}
+print(squares)
+print_footer(section)
+
+
+# 4.6 Use a set comprehension to create the set odd from the odd numbers in
+# range(10)
+section = '4.6'
+print_header(section)
+limit = 10
+odd = {num for num in range(limit) if num % 2 == 1}
+print(odd)
+print_footer(section)
+
+
+# 4.7 Use a generator comprehension to return the string 'Got ' and a number for the
+# numbers in range(10). Iterate through this by using a for loop.
+section = '4.7'
+print_header(section)
+limit = 10
+string_generator = ('Got ' + str(num) for num in range(limit))
+for item in string_generator:
+    print(item)
+
+print_footer(section)

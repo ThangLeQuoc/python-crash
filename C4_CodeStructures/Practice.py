@@ -119,3 +119,7 @@ print_footer(section)
 
 # 4.10 Define a decorator called test that prints 'start' when a function is called and
 # 'end' when it finishes.
+section = '4.10'
+print_header(section)
+
+print_footer(section)

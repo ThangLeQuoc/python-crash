@@ -7,6 +7,7 @@ def print_header(section: str):
 def print_footer(section: str):
     print('End of section ' + section)
 
+
 # 4.1 Assign the value 7 to the variable guess_me. Then, write the conditional tests (if,
 # else, and elif) to print the string 'too low' if guess_me is less than 7, 'too high' if
 # greater than 7, and 'just right' if equal to 7.
@@ -67,7 +68,7 @@ print_footer(section)
 section = '4.5'
 print_header(section)
 limit = 10
-squares = { num:num * num for num in range(limit)}
+squares = {num: num * num for num in range(limit)}
 print(squares)
 print_footer(section)
 
@@ -97,8 +98,12 @@ print_footer(section)
 # mione']
 section = '4.8'
 print_header(section)
+
+
 def good():
     return ['Harry', 'Ron', 'Hermione']
+
+
 print(good())
 print_footer(section)
 
@@ -117,9 +122,74 @@ for num in get_odds:
     count += 1
 print_footer(section)
 
+
+# def get_odds():
+#     for number in range(1, 10, 2):
+#         yield number
+
+# count = 1
+# for number in get_odds():
+#     if count == 3:
+#         print("The third odd number is", number)
+#         break
+#     count += 1
+
+
 # 4.10 Define a decorator called test that prints 'start' when a function is called and
 # 'end' when it finishes.
-section = '4.10'
+# section = '4.10'
+# print_header(section)
+
+def test(func):
+    def nested_function(*args, **kwargs):
+        print('start')
+        result = func(*args, **kwargs)
+        print('end')
+        return result
+    return nested_function
+
+@test
+def add(a, b):
+    print(a + b)
+
+add(12,4)
+
+
+# 4.11 Define an exception called OopsException. Raise this exception to see what hap‐
+# pens. Then write the code to catch this exception and print 'Caught an oops'.
+section = '4.11'
 print_header(section)
 
+
+class OopsException(Exception):
+    pass
+
+
+def with_exception(a):
+    if a < 0:
+        raise OopsException(a)
+
+
+try:
+    with_exception(-1)
+except OopsException as err:
+    print('Caught an oops')
+
+print_footer(section)
+
+
+# 4.12 Use zip() to make a dictionary called movies that pairs these lists: titles =
+# ['Creature of Habit', 'Crewel Fate'] and plots = ['A nun turns into a mon
+# ster', 'A haunted yarn shop'].
+section = '4.12'
+print_header(section)
+
+titles = ['Creature of Habit', 'Crewel Fate']
+plots = ['A nun turns into a monster', 'A haunted yarn shop']
+
+movies = {}
+for title, plot in zip(titles, plots):
+    movies[title] = plot
+# or movies = dict(zip(titles, plots))
+print(movies)
 print_footer(section)
